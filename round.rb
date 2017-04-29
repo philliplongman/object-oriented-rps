@@ -1,14 +1,9 @@
 class Round
 
-  MOVES = {
-    rock: Move.new(name: "rock", beats: "scissors"),
-    paper: Move.new(name: "paper", beats: "rock"),
-    scissors: Move.new(name: "scissors", beats: "paper")
-  }
 
-  def initialize(player_key, computer_key = MOVES.keys.sample)
-    @player_move = MOVES[player_key.to_sym]
-    @computer_move = MOVES[computer_key.to_sym]
+  def initialize(player_move, computer_move)
+    @player_move = player_move
+    @computer_move = computer_move
 
     raise ArgumentError, "Invalid key(s)." unless player_move && computer_move
   end

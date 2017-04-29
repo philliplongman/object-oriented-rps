@@ -1,14 +1,15 @@
 class Move
 
-  attr_reader :name
+  attr_reader :name, :shortcut
 
-  def initialize(name:, beats:)
+  def initialize(name:, beats:, shortcut: nil)
     @name = name.to_sym
     @beats = beats.to_sym
+    @shortcut = shortcut
   end
 
   def to_s
-    name.to_s
+    name.to_s.capitalize
   end
 
   def beats?(move)
