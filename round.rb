@@ -1,6 +1,5 @@
 class Round
 
-
   def initialize(player_move, computer_move)
     @player_move = player_move
     @computer_move = computer_move
